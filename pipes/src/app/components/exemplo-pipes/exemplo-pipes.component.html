@@ -1,5 +1,4 @@
-44 lines (33 sloc) 986 Bytes
-<h5>Exemplos de Pipes</h5>
+<h3>Exemplos de Pipes</h3>
 
 <p>Título: {{ livro.titulo | uppercase | lowercase  }}</p>
 <p>Estrelas: {{ livro.rating | number:'1.1-1' }}</p>
@@ -16,10 +15,26 @@
 <input type="text" #novoValor>
 <button (click)="addCurso(novoValor.value)">Add Curso</button>
 
-<h5>Pipe Puro</h5>
+<h3>Pipe Puro</h3>
 
 <ul>
     <li *ngFor="let liv of livros | filterArray:filtro">
+        {{ liv }}
+    </li>
+</ul>
+
+<h3>Pipe Impuro</h3>
+
+<ul>
+    <li *ngFor="let liv of livros | filtroArrayImpuro:filtro">
+        {{ liv }}
+    </li>
+</ul>
+
+<h3>maneira correta de filtrar um array </h3>
+
+<ul>
+    <li *ngFor="let liv of obterCursos()">
         {{ liv }}
     </li>
 </ul>

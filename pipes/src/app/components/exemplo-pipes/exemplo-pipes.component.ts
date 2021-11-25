@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExemploPipesComponent implements OnInit {
 
-  constructor() { }
 
+  
+  constructor() { }
+  
   livro: any = {
     titulo: 'Learning JavaScript Data Structures and Algorithms 2nd ed',
     rating: 4.54321,
@@ -17,17 +19,29 @@ export class ExemploPipesComponent implements OnInit {
     dataLancamento: new Date(2016, 5, 23),
     url: 'http://a.co/glqjpRP'
   };
-
+  
   livros: string[] = ['Java', 'Angular 2'];
-
+  
   filtro: string= '';
-
+  
   ngOnInit(): void {
   }
-
-  addCurso(valor: string) {
+  
+  public addCurso(valor: string) {
     this.livros.push(valor);
-
+    
   }
+  public obterCursos(){
 
+    if (this.livros.length === 0 || this.filtro === undefined
+      || this.filtro.trim() === '') {
+        return this.livros;
+      }
+  
+      return this.livros.filter(
+         v => v.toLocaleLowerCase().includes(this.filtro.toLocaleLowerCase())
+      );
+      
+  }
+  
 }
