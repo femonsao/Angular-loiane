@@ -1,0 +1,16 @@
+.menu-container{
+  display: flex ;
+  flex-direction: row ;
+  align-items: center;
+  background-color: #164bf8;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+}
+button {
+  margin: 3px;
+  background-color: #164bf8 ;
+  color: bisque;
+
+}
+
