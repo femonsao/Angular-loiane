@@ -1,6 +1,14 @@
 <div class="menu-container">
   <button mat-button (click)="goToLogin()">Login</button>
-  <button  mat-button (click)="goToHome()">Home</button>
+  <button mat-button (click)="goToHome()">Home</button>
   <button mat-button (click)="goToCursos()">Cursos</button>
+  <button mat-button [routerLink]="['curso', idCurso.value]">Cursos detalhes</button>
 
 </div>
+
+<div style="margin: 25px;">
+  <span style="margin-right: 5px;">Entre com Id do curso</span>
+  <input #idCurso>
+
+</div>
+

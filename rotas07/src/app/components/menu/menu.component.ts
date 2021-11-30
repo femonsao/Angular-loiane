@@ -26,5 +26,8 @@ export class MenuComponent implements OnInit {
     this.route.navigateByUrl('/cursos')
 
   }
+  public goToCursosDetail(id: number){
+    this.route.navigateByUrl(`/cursos/` + id)
+  }
 
 }
