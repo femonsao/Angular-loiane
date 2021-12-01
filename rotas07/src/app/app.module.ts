@@ -10,7 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AppComponent } from './app.component';
 import { CursosComponent } from './components/cursos/cursos.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { CursosDetalhesComponent } from './components/cursos-detalhes/cursos-detalhes.component';
+import { CursosDetalhesComponent } from './components/cursos/cursos-detalhes/cursos-detalhes.component';
 
 @NgModule({
   declarations: [
